@@ -143,7 +143,7 @@ function addEvents() {
         let txt = document.querySelector('div.write_wrap input').value;
         
         addDiary(getCurrentDate()+txt);
-
+  
         removeValue([document.querySelector('div.write_wrap input')])    
 
         showSelectedView(LIST_VIEW);
@@ -163,7 +163,7 @@ function removeValue(eles) {
 function listUpDiaries() {
     console.log('listUpDiaries() CALLED!')
 
-    listWrap.textContent='';
+    listWrap.textContent='';     // 이렇게 목록을 한 번 초기화 해줘야한다.
 
     let diaryArr = searchDiaries();
 
