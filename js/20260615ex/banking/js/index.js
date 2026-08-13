@@ -281,7 +281,11 @@ function accListUpDiaries() {
 
     let accountObj = searchAccounts();
 
-    let accountKeys = Object.keys(accountObj);
+    let accountKeys = []
+  
+    for (let key in accountObj) {
+        accountKeys.prepend(key)
+    }
    
     for (let i = 0; i < accountKeys.length; i++) {
 
